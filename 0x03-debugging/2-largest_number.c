@@ -10,6 +10,7 @@
 
 int largest_number(int a, int b, int c)
 {
+<<<<<<< HEAD
 int largest;
 
 if (a > b && a > c)
@@ -30,4 +31,22 @@ else
 }
 
 return (largest);
+=======
+	int largest;
+
+	if (a >= b && a >= c)
+	{
+		largest = a;
+	}
+	else if (b >= a && b >= c)
+	{
+		largest = b;
+	}
+	else
+	{
+		largest = c;
+	}
+
+	return (largest);
+>>>>>>> 8961cf82e459e66050ac0ab6e2c50c08ac218716
 }
