@@ -1,38 +1,31 @@
+#include "main.h"
 
-   
 /**
- * _strncpy - A function that copies a string.
- *
- * @dest: pointer to destination input buffer
- * @src: pointer to source input buffer
- * @n: bytes of @src
- *
- * Return: @dest
-*/
+ *print_number - print a number using _putchar.
+ *@n: the number to be printed.
+ */
 
-char *_strncpy(char *dest, char *src, int n)
+void print_number(int n)
 {
-	int i;
+	unsigned int i = 1;
 
-	/**
-	 * iterate through src array
-	 * where if there is no null byte
-	 * among the first n bytes of source
-	 * the string placed in dest will not be
-	 * null terminated
-	*/
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	/**
-	 * if the length of source is less than n
-	 * write additional nullbytes to dest to
-	 * ensure that a total of n bytes is written
-	*/
-	while (i < n)
+	if (n < 0)
 	{
-		dest[i] = '\0';
-		i++;
+		_putchar('-');
+		n *= -1;
 	}
+	if (n == 0)
+		_putchar('0');
+	else
+	{
+		while ((n / i) >= 10)
+			i *= 10;
 
-	return (dest);
+		while (i > 0)
+		{
+			_putchar((n / i) + '0');
+			n %= i;
+			i /= 10;
+		}
+	}
 }
