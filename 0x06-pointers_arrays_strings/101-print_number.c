@@ -28,4 +28,4 @@ void print_number(int n)
 			i /= 10;
 		}
 	}
-
+}
