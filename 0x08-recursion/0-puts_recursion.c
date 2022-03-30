@@ -1,6 +1,14 @@
 #include "main.h"
 void _puts_recursion(char *s)
 {
-	*s="driver"
-	 printf(*s"\n");
+if(*s=='\0')	
+{
+         _putcar('\n');
+	
+}
+else
+{
+         _putchar(*s);
+	 _puts_recursion(s+1);
+}
 }
