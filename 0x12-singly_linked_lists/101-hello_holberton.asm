@@ -4,3 +4,6 @@ MOV AX,BX
 BX="Hello, Holberton"
 MOV AH,09H
 INT 21H
+MOV AH,4CH
+INT 21H
+END MAIN
