@@ -1,0 +1,7 @@
+.MODEL
+.STACK 100H
+.DATA
+MOV AX,BX
+BX="Hello, Holberton"
+OUT AX,199
+INT 21H
