@@ -6,9 +6,9 @@ size_t print_listint(const listint_t *h)
     while(h!=NULL)
     {
         if(h->str==NULL)
-            printf("[%d]%s",0,"(nil)");
+            printf("[%d]%s\n",0,"(nil)");
         else
-            printf("[%d]%s",0,"(nil)"h->len,h->str);
+            printf("[%d]%s\n",0,"(nil)",h->len,h->str);
         h=h->next;
         nodel++;
 
