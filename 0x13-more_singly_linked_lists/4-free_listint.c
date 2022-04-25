@@ -1,10 +1,10 @@
 #include "lists.h"
-void free_list(list_t *head)
+void free_listint(listint_t *head)
 {
-    list_t *current;
+    listint_t *current;
     while((current=head)!=NULL)
     {
-        head-=head->next;
+        head=head->next;
         free(current->str);
         free(current);
     }
