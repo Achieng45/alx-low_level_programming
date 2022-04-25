@@ -12,13 +12,15 @@
  * Description: singly linked list node structure
  * for Holberton project
  */
- typedef struct list_s
+ typedef struct listint_s
  {
      char *str;
      unsigned int len;
-     struct list_s *next
- }list_t;
+     struct listint_s *next
+ }listint_t;
 
 void free_listint(listint_t *head);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
+void free_listint(listint_t *head);
+listint_t *add_nodeint(listint_t **head, const int n);
