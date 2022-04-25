@@ -10,9 +10,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
         return(NULL);
      else
         return **add;
-     add->str=strdup(str);
+     
      for(nchar=0;str[nchar];nchar++);
-     add->len=nchar;
+     add->n=nchar;
      add->next=*head;
      return(*head);
     
