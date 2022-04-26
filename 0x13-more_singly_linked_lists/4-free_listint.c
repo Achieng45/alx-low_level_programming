@@ -6,18 +6,13 @@
  *
  * Return: no return.
  */
-
 void free_listint(listint_t *head)
 {
-   	
-       listint_t *current;
+	listint_t *temp;
 
-
-       while ((current = head) != NULL)
-       {   
-	
-               head = head->next;
-               free(current);
-       }
-
+	while ((temp = head) != NULL)
+	{
+		head = head->next;
+		free(temp);
+	}
 }
